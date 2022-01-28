@@ -9,9 +9,9 @@ public class ExitCommand : ConsoleCommand
 		, ISwitcher switcher)
 		: base(textCommand)
 	{
-		ArgumentNullException.ThrowIfNull(switcher);
-
 		this.switcher = switcher;
+
+		ArgumentNullException.ThrowIfNull(this.switcher);
 	}
 
 	public override void Execute(object parameter)

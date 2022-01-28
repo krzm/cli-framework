@@ -13,9 +13,8 @@ public class HelpCommand
 		, IOutput output)
 		: base(textCommand)
 	{
-		ArgumentNullException.ThrowIfNull(output);
-
 		this.output = output;
+		ArgumentNullException.ThrowIfNull(this.output);
 	}
 
 	public void SetCommands(List<TextCommand> commands)

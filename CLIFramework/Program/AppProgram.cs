@@ -1,5 +1,5 @@
 ﻿using CLIHelper;
-using DIHelper.Program;
+using DIHelper;
 
 namespace CLIFramework;
 

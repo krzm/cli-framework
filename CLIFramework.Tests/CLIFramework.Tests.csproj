@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+		<PackageReference Include="FluentAssertions" Version="6.2.0" />
+    <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
@@ -20,4 +22,22 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+		<ProjectReference Include="..\CLIFramework\CLIFramework.csproj"/>
+	</ItemGroup>
+
+  <ItemGroup>
+		<Reference Include="CLIHelper">
+			<HintPath>..\..\CLIHelper\CLIHelper\bin\Release\net6.0\CLIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIWizardHelper">
+			<HintPath>..\..\CLIWizardHelper\CLIWizardHelper\bin\Release\net6.0\CLIWizardHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CRUDCommandHelper">
+			<HintPath>..\..\CRUDCommandHelper\CRUDCommandHelper\bin\Release\net6.0\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\DIHelper\DIHelper\bin\Release\net6.0\DIHelper.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
