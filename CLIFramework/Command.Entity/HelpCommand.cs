@@ -13,11 +13,10 @@ public class HelpCommand<TEntity> : DataCommand<TEntity>
 		, string[] props)
 		: base(textCommand)
 	{
-		ArgumentNullException.ThrowIfNull(output);
-		ArgumentNullException.ThrowIfNull(props);
-
 		this.output = output;
 		this.props = props;
+		ArgumentNullException.ThrowIfNull(this.output);
+		ArgumentNullException.ThrowIfNull(this.props);
 	}
 
 	public override void Execute(object parameter)
