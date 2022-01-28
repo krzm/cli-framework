@@ -1,9 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Unity" Version="5.11.10" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="CLIHelper">
+			<HintPath>..\..\CLIHelper\CLIHelper\bin\Release\net6.0\CLIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIWizardHelper">
+			<HintPath>..\..\CLIWizardHelper\CLIWizardHelper\bin\Release\net6.0\CLIWizardHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CRUDCommandHelper">
+			<HintPath>..\..\CRUDCommandHelper\CRUDCommandHelper\bin\Release\net6.0\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\DIHelper\DIHelper\bin\Release\net6.0\DIHelper.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
 </Project>
