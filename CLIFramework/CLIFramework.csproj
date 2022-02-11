@@ -12,16 +12,16 @@
 
 	<ItemGroup>
 		<Reference Include="CLIHelper">
-			<HintPath>..\..\build\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CLIWizardHelper">
-			<HintPath>..\..\build\Build\cli-wizard-helper\CLIWizardHelper\CLIWizardHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-wizard-helper\CLIWizardHelper\CLIWizardHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CRUDCommandHelper">
-			<HintPath>..\..\build\Build\crud-command-helper\CRUDCommandHelper\CRUDCommandHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\crud-command-helper\CRUDCommandHelper\CRUDCommandHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="DIHelper">
-			<HintPath>..\..\build\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 

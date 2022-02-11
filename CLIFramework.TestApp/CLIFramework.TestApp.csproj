@@ -13,19 +13,19 @@
 
 	<ItemGroup>
 		<Reference Include="DIHelper">
-			<HintPath>..\..\build\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CLIHelper">
-			<HintPath>..\..\build\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="DataToTable">
-			<HintPath>..\..\build\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
+			<HintPath>..\..\..\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
 		</Reference>
 		<Reference Include="ModelHelper">
-			<HintPath>..\..\build\Build\model-helper\ModelHelper\ModelHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\model-helper\ModelHelper\ModelHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CLIReader">
-			<HintPath>..\..\build\Build\cli-reader\CLIReader\CLIReader.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-reader\CLIReader\CLIReader.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

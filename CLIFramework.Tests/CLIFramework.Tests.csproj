@@ -28,28 +28,28 @@
 
 	<ItemGroup>
 		<Reference Include="DIHelper">
-			<HintPath>..\..\build\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CLIHelper">
-			<HintPath>..\..\build\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="DataToTable">
-			<HintPath>..\..\build\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
+			<HintPath>..\..\..\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
 		</Reference>
 		<Reference Include="ModelHelper">
-			<HintPath>..\..\build\Build\model-helper\ModelHelper\ModelHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\model-helper\ModelHelper\ModelHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CLIReader">
-			<HintPath>..\..\build\Build\cli-reader\CLIReader\CLIReader.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-reader\CLIReader\CLIReader.dll</HintPath>
 		</Reference>
 		<Reference Include="CLIWizardHelper">
-			<HintPath>..\..\build\Build\cli-wizard-helper\CLIWizardHelper\CLIWizardHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\cli-wizard-helper\CLIWizardHelper\CLIWizardHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="CRUDCommandHelper">
-			<HintPath>..\..\build\Build\crud-command-helper\CRUDCommandHelper\CRUDCommandHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\crud-command-helper\CRUDCommandHelper\CRUDCommandHelper.dll</HintPath>
 		</Reference>
 		<Reference Include="EFCoreHelper">
-			<HintPath>..\..\build\Build\efcore-helper\EFCoreHelper\EFCoreHelper.dll</HintPath>
+			<HintPath>..\..\..\Build\efcore-helper\EFCoreHelper\EFCoreHelper.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>
