@@ -4,6 +4,7 @@ namespace CLIFramework;
 
 public abstract class ReadCommand<TEntity>
 	: DataCommand<TEntity>
+		where TEntity : class, new()
 {
 	private readonly IReadCommand<TEntity> entityReadCommand;
 
@@ -17,8 +18,8 @@ public abstract class ReadCommand<TEntity>
 		ArgumentNullException.ThrowIfNull(this.entityReadCommand);
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
-		entityReadCommand.Read(default);
+		entityReadCommand.Read(new TEntity());
 	}
 }

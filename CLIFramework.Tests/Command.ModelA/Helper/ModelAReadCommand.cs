@@ -2,6 +2,7 @@ using CLIHelper;
 using CRUDCommandHelper;
 using DataToTable;
 using ModelHelper;
+using Serilog;
 using System.Collections.Generic;
 
 namespace CLIFramework.Tests;
@@ -12,10 +13,12 @@ public class ModelAReadCommand
     public ModelAReadCommand(
         IModelAUnitOfWork unitOfWork
         , IOutput output
+        , ILogger log
         , IDataToText<ModelA> textProvider) 
             : base(
                 unitOfWork
                 , output
+                , log
                 , textProvider)
     {
     }

@@ -1,7 +1,7 @@
-using CLIHelper;
 using CLIReader;
 using CLIWizardHelper;
 using ModelHelper;
+using Serilog;
 
 namespace CLIFramework.Tests;
 
@@ -11,10 +11,10 @@ public class ModelAUpdateCommand
     public ModelAUpdateCommand(
         IModelAUnitOfWork unitOfWork
         , IReader<string> requiredTextReader
-        , IOutput output) 
+        , ILogger log) 
             : base(unitOfWork
                 , requiredTextReader
-                , output)
+                , log)
     {
     }
 

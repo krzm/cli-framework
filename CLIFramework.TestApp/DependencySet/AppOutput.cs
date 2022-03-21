@@ -4,7 +4,8 @@ using Unity;
 
 namespace CLIFramework.TestApp;
 
-public class AppOutput : DIHelper.Unity.AppOutput
+public class AppOutput 
+    : CLIHelper.Unity.AppOutput
 {
     public AppOutput(
         IUnityContainer container) 

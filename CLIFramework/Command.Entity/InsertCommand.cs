@@ -7,7 +7,7 @@ public abstract class InsertCommand<TEntity>
 		where TEntity : new()
 {
 	protected readonly IInsertWizard<TEntity> modelAInsertWizard;
-	private ICommandRunner commandRunner;
+	private ICommandRunner? commandRunner;
 
 	public InsertCommand(
 		TextCommand textCommand
@@ -25,9 +25,11 @@ public abstract class InsertCommand<TEntity>
 		this.commandRunner = commandRunner;
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		modelAInsertWizard.Insert();
+		ArgumentNullException.ThrowIfNull(commandRunner);
+		ArgumentNullException.ThrowIfNull(TextCommand.TypeName);
 		commandRunner.RunCommand(TextCommand.TypeName);
 	}
 }

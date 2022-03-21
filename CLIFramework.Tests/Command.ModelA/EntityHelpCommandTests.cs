@@ -16,7 +16,8 @@ public class EntityHelpCommandTests
 		Assert.Throws<ArgumentNullException>(
             "textCommand"
 			, ()=> 
-			{ 
+			{
+				#pragma warning disable CS8625
 				IAppCommand sut = new HelpCommand<ModelA>(
 					null
 					, null
@@ -49,6 +50,7 @@ public class EntityHelpCommandTests
 					new TextCommand(CommandName, nameof(ModelA))
 					, new Mock<IOutput>().Object
 					, null); 
+				#pragma warning restore CS8625
 			});
 	}
 

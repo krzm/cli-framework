@@ -15,10 +15,11 @@ public class ExitCommandTests
 		Assert.Throws<ArgumentNullException>(
 			"textCommand"
 			, ()=> 
-			{ 
+			{
+				#pragma warning disable CS8625
 				IAppCommand sut = new ExitCommand(
 					null
-					, null); 
+					, null);
 			});
 	}
 
@@ -28,10 +29,11 @@ public class ExitCommandTests
 		Assert.Throws<ArgumentNullException>(
 			"this.switcher"
 			, ()=> 
-			{ 
+			{
 				IAppCommand sut = new ExitCommand(
 					new TextCommand(CommandName)
-					, null); 
+					, null);
+				#pragma warning restore CS8625
 			});
 	}
 

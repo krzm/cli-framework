@@ -18,7 +18,7 @@ public class OptionalText : ConsoleCommand
 		this.textReader = textReader;
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		TestTextReader("1. Test happy case. Type input and press enter.");
 		output.WriteLine("");

@@ -19,7 +19,7 @@ public class TextTable : ConsoleCommand
 		this.textProvider = textProvider;
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		TestTextProvider("Case1: data shorter than headers", GetCase1());
 		output.WriteLine("");

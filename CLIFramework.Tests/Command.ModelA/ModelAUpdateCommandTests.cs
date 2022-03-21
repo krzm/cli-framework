@@ -1,9 +1,9 @@
 using System;
-using CLIHelper;
 using CLIReader;
 using CLIWizardHelper;
 using ModelHelper;
 using Moq;
+using Serilog;
 using Xunit;
 
 namespace CLIFramework.Tests;
@@ -18,7 +18,8 @@ public class ModelAUpdateCommandTests
 		Assert.Throws<ArgumentNullException>(
 			"UnitOfWork"
 			, ()=> 
-			{ 
+			{
+				#pragma warning disable CS8625
 				IUpdateWizard<ModelA> sut = new ModelAUpdateCommand(
 					null
 					, null
@@ -44,23 +45,24 @@ public class ModelAUpdateCommandTests
 	public void DependencyC_Should_Throw_When_Null()
 	{
 		Assert.Throws<ArgumentNullException>(
-			"this.output"
+			"this.log"
 			, ()=> 
 			{ 
 				IUpdateWizard<ModelA> sut = new ModelAUpdateCommand(
 					new Mock<IModelAUnitOfWork>().Object
 					, new Mock<IReader<string>>().Object
-					, null); 
+					, null);
+				#pragma warning restore CS8625
 			});
 	}
 
 	[Fact]
 	public void Should_Invoke_Method()
 	{
-		var rMock = new Mock<IReader<string>>();
 		var uowMock = new Mock<IModelAUnitOfWork>();
-		var crMock = new Mock<ICommandRunner>();
-		var oMock = new Mock<IOutput>();
+		var rMock = new Mock<IReader<string>>();
+		//var crMock = new Mock<ICommandRunner>();
+		var logMock = new Mock<ILogger>();
 		rMock.Setup(m => m.Read(GetIdReadConfig()))
 			.Returns("99");
 		uowMock.Setup(m => m.GetById(It.Is<int>((i) => i == 99)))
@@ -70,7 +72,7 @@ public class ModelAUpdateCommandTests
 		IUpdateWizard<ModelA> sut = new ModelAUpdateCommand(
 			uowMock.Object
 			, rMock.Object
-			, oMock.Object);
+			, logMock.Object);
 
 		sut.Update();
 

@@ -6,7 +6,7 @@ public class HelpCommand
 	: ConsoleCommand
 {
 	private readonly IOutput output;
-	private List<TextCommand> commands;
+	private List<TextCommand>? commands;
 
 	public HelpCommand(
 		TextCommand textCommand
@@ -32,8 +32,9 @@ public class HelpCommand
 			throw new ArgumentException("Empty list", nameof(commands));
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
+		ArgumentNullException.ThrowIfNull(commands);
 		ValidateCommands(commands);
 
 		output.Clear();

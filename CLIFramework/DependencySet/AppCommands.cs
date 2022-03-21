@@ -87,6 +87,7 @@ public class AppCommands
     private void SetupHelpCommand()
     {
         var helpCommand = Container.Resolve<IAppCommand>("help") as HelpCommand;
+        ArgumentNullException.ThrowIfNull(helpCommand);
         helpCommand.SetCommands(Container.Resolve<List<IAppCommand>>().Select(c => c.TextCommand).ToList());
     }
 }

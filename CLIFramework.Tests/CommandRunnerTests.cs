@@ -13,7 +13,8 @@ public class CommandRunnerTests
 		Assert.Throws<ArgumentNullException>(
             "this.commandParser"
 			, ()=> 
-			{ 
+			{
+				#pragma warning disable CS8625
 				ICommandRunner sut = new CommandRunner(
 					null
 					, null); 
@@ -29,7 +30,8 @@ public class CommandRunnerTests
 			{ 
 				ICommandRunner sut = new CommandRunner(
 					new Mock<ICommandParser>().Object
-					, null); 
+					, null);
+				#pragma warning restore CS8625
 			});
 	}
 

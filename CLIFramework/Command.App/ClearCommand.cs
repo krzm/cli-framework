@@ -15,7 +15,7 @@ public class ClearCommand : ConsoleCommand
 		ArgumentNullException.ThrowIfNull(this.output);
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		output.Clear();
 	}

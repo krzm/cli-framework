@@ -14,7 +14,7 @@ public class ExitCommand : ConsoleCommand
 		ArgumentNullException.ThrowIfNull(this.switcher);
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		switcher.Switch = false;
 	}

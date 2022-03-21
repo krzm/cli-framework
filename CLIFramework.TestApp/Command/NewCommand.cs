@@ -14,7 +14,7 @@ public class NewCommand : ConsoleCommand
 		output = consoleIO;
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		output.WriteLine("New command");
 	}

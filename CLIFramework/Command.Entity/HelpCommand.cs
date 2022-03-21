@@ -19,7 +19,7 @@ public class HelpCommand<TEntity> : DataCommand<TEntity>
 		ArgumentNullException.ThrowIfNull(this.props);
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		output.Clear();
 		output.WriteLine($"Help {TextCommand.TypeName}:");

@@ -18,7 +18,7 @@ public class OptionalDateTime : ConsoleCommand
 		this.dateReader = dateReader;
 	}
 
-	public override void Execute(object parameter)
+	public override void Execute(object? parameter)
 	{
 		TestDateTimeReader("1. Test happy case. Type input and press enter.");
 		output.WriteLine("");

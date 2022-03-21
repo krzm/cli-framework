@@ -16,10 +16,11 @@ public class HelpCommandTests
 		Assert.Throws<ArgumentNullException>(
             "textCommand"
 			, ()=> 
-			{ 
+			{
+				#pragma warning disable CS8625
 				IAppCommand sut = new HelpCommand(
 					null
-					, null); 
+					, null);
 			});
 	}
 
@@ -29,10 +30,10 @@ public class HelpCommandTests
 		Assert.Throws<ArgumentNullException>(
             "this.output"
             , ()=> 
-            { 
+            {
                 IAppCommand sut = new HelpCommand(
 					new TextCommand(CommandName)
-					, null); 
+					, null);
             });
 	}
 
@@ -47,6 +48,7 @@ public class HelpCommandTests
 					new TextCommand(CommandName)
 					, new Mock<IOutput>().Object)
 				.SetCommands(null);
+				#pragma warning restore CS8625
 			});
 	}
 

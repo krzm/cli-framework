@@ -15,8 +15,9 @@ public class ClearCommandTests
 		Assert.Throws<ArgumentNullException>(
             "textCommand"
 			, ()=> 
-			{ 
-				IAppCommand sut = new ClearCommand(null, null); 
+			{
+				#pragma warning disable CS8625
+				IAppCommand sut = new ClearCommand(null, null);
 			});
 	}
 
@@ -26,8 +27,9 @@ public class ClearCommandTests
 		Assert.Throws<ArgumentNullException>(
             "this.output"
             , ()=> 
-            { 
-                IAppCommand sut = new ClearCommand(new TextCommand(CommandName), null); 
+            {
+                IAppCommand sut = new ClearCommand(new TextCommand(CommandName), null);
+				#pragma warning restore CS8625
             });
 	}
 

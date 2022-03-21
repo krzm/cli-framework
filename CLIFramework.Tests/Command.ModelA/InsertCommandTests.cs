@@ -1,9 +1,9 @@
 using System;
-using CLIHelper;
 using CLIReader;
 using CLIWizardHelper;
 using ModelHelper;
 using Moq;
+using Serilog;
 using Xunit;
 
 namespace CLIFramework.Tests;
@@ -18,7 +18,8 @@ public class InsertCommandTests
 		Assert.Throws<ArgumentNullException>(
 			"UnitOfWork"
 			, ()=> 
-			{ 
+			{
+				#pragma warning disable CS8625
 				IInsertWizard<ModelA> sut = 
 					new ModelAInsertCommand(
 						null
@@ -46,14 +47,15 @@ public class InsertCommandTests
 	public void DependencyC_Should_Throw_When_Null()
 	{
 		Assert.Throws<ArgumentNullException>(
-			"this.output"
+			"this.log"
 			, ()=> 
 			{ 
 				IInsertWizard<ModelA> sut = 
 					new ModelAInsertCommand(
 						new Mock<IModelAUnitOfWork>().Object
 						, new Mock<IReader<string>>().Object
-						, null); 
+						, null);
+				#pragma warning restore CS8625
 			});
 	}
 
@@ -62,12 +64,12 @@ public class InsertCommandTests
 	{
 		var uowMock =  new Mock<IModelAUnitOfWork>();
 		var crMock = new Mock<ICommandRunner>();
-		var oMock = new Mock<IOutput>();
+		var logMock = new Mock<ILogger>();
 		IInsertWizard<ModelA> sut = 
 			new ModelAInsertCommand(
 				uowMock.Object
 				, new Mock<IReader<string>>().Object
-				, oMock.Object);
+				, logMock.Object);
 
 		sut.Insert();
 

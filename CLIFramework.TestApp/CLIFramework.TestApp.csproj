@@ -7,10 +7,30 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
+  	<ItemGroup>
 		<ProjectReference Include="..\CLIFramework\CLIFramework.csproj" />
 	</ItemGroup>
 
+	<!--Debug refs-->
+	<!-- <ItemGroup>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIHelper">
+			<HintPath>..\..\cli-helper\CLIHelper\bin\Debug\net6.0\CLIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="DataToTable">
+			<HintPath>..\..\datatotable\DataToTable\bin\Debug\net6.0\DataToTable.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelHelper">
+			<HintPath>..\..\model-helper\ModelHelper\bin\Debug\net6.0\ModelHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIReader">
+			<HintPath>..\..\cli-reader\CLIReader\bin\Debug\net6.0\CLIReader.dll</HintPath>
+		</Reference>
+	</ItemGroup> -->
+
+	<!--Release refs-->
 	<ItemGroup>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>

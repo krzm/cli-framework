@@ -32,8 +32,9 @@ public class AppProgram : IAppProgram
 		{
 			output.WriteLine("");
 			output.Write($"{appInfo["AppName"]}->");
-			CommandRunner.RunCommand(
-				input.ReadLine());
+			var inputText = input.ReadLine();
+			ArgumentNullException.ThrowIfNull(inputText);
+			CommandRunner.RunCommand(inputText);
 		}
 		return 0;
 	}

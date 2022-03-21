@@ -4,9 +4,9 @@ public class TextCommand
 {
 	public string CommandText { get; init; }
 
-	public string TypeName { get; init; }
+	public string? TypeName { get; init; }
 
-	public string[] Params { get; init; }
+	public string[]? Params { get; init; }
 
 	public TextCommand(
 		string commandText)
@@ -46,7 +46,7 @@ public class TextCommand
 		Params = paramArray;
 	}
 
-	public override bool Equals(object obj)
+	public override bool Equals(object? obj)
 	{
 		if ((obj == null) || !GetType().Equals(obj.GetType()))
 		{
