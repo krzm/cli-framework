@@ -18,11 +18,11 @@
 		<Reference Include="CLIHelper">
 			<HintPath>..\..\cli-helper\CLIHelper\bin\Debug\net6.0\CLIHelper.dll</HintPath>
 		</Reference>
-		<Reference Include="CLIWizardHelper">
-			<HintPath>..\..\cli-wizard-helper\CLIWizardHelper\bin\Debug\net6.0\CLIWizardHelper.dll</HintPath>
-		</Reference>
 		<Reference Include="CRUDCommandHelper">
 			<HintPath>..\..\crud-command-helper\CRUDCommandHelper\bin\Debug\net6.0\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIWizardHelper">
+			<HintPath>..\..\cli-wizard-helper\CLIWizardHelper\bin\Debug\net6.0\CLIWizardHelper.dll</HintPath>
 		</Reference>
 	</ItemGroup> -->
 
@@ -34,11 +34,11 @@
 		<Reference Include="CLIHelper">
 			<HintPath>..\..\..\Build\cli-helper\CLIHelper\CLIHelper.dll</HintPath>
 		</Reference>
-		<Reference Include="CLIWizardHelper">
-			<HintPath>..\..\..\Build\cli-wizard-helper\CLIWizardHelper\CLIWizardHelper.dll</HintPath>
-		</Reference>
 		<Reference Include="CRUDCommandHelper">
 			<HintPath>..\..\..\Build\crud-command-helper\CRUDCommandHelper\CRUDCommandHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CLIWizardHelper">
+			<HintPath>..\..\..\Build\cli-wizard-helper\CLIWizardHelper\CLIWizardHelper.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>
