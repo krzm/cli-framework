@@ -1,3 +1,4 @@
+using CLIHelper.Unity;
 using Unity;
 
 namespace CLIFramework.TestApp;
@@ -14,8 +15,11 @@ public class UnityDependencySuite
 	protected override void RegisterAppData() => 
 		RegisterSet<AppData>();
 
+	protected override void RegisterConsoleInput() =>
+		RegisterSet<CliIOSet>();
+
 	protected override void RegisterConsoleOutput() =>
-		RegisterSet<AppOutput>();
+		RegisterSet<DataToTableSet>();
 
 	protected override void RegisterUtils() =>
 		RegisterSet<AppUtils>();

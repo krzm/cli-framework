@@ -4,10 +4,10 @@ using Unity;
 
 namespace CLIFramework.TestApp;
 
-public class AppOutput 
-    : CLIHelper.Unity.AppOutput
+public class DataToTableSet 
+    : DataToTable.Unity.DataToTableSet
 {
-    public AppOutput(
+    public DataToTableSet(
         IUnityContainer container) 
         : base(container)
     {
