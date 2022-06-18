@@ -3,7 +3,8 @@ using DIHelper;
 
 namespace CLIFramework;
 
-public class AppProgram : IAppProgram
+public class AppProgram
+    : IMainProgram
 {
 	private readonly IAppConfig appInfo;
 	protected readonly ICommandRunner CommandRunner;

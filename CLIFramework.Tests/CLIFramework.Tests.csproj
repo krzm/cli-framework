@@ -9,6 +9,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="FluentAssertions" Version="6.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0-preview.5.22302.2" />
 		<PackageReference Include="Moq" Version="4.16.1" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
 		<PackageReference Include="xunit" Version="2.4.1" />
@@ -34,8 +35,8 @@
 		<Reference Include="ModelHelper">
 			<HintPath>..\..\model-helper\ModelHelper\bin\Debug\net6.0\ModelHelper.dll</HintPath>
 		</Reference>
-		<Reference Include="EFCoreHelper">
-			<HintPath>..\..\efcore-helper\EFCoreHelper\bin\Debug\net6.0\EFCoreHelper.dll</HintPath>
+		<Reference Include="EFCore.Helper">
+			<HintPath>..\..\efcore-helper\EFCore.Helper\bin\Debug\net6.0\EFCore.Helper.dll</HintPath>
 		</Reference>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>

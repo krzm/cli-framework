@@ -8,7 +8,7 @@ namespace CLIFramework;
 
 public class AppProgram<TProgram>
     : UnityDependencySet
-        where TProgram : IAppProgram
+        where TProgram : IMainProgram
 {
     public AppProgram(
         IUnityContainer container)
@@ -18,7 +18,7 @@ public class AppProgram<TProgram>
 
     public override void Register()
     {
-        Container.RegisterType<IAppProgram, TProgram>(
+        Container.RegisterType<IMainProgram, TProgram>(
             GetInjectionConstructor());
     }
 
